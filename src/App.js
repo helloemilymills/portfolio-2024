@@ -1,11 +1,11 @@
 import './App.css';
+import Carousel from './components/Carousel.js';
 
-function App() {
+export default function App() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Carousel/>
+    </>
   );
 }
 
-export default App;
