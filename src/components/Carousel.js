@@ -1,7 +1,10 @@
 import './Carousel.css';
+import Sticker from './Sticker';
+import Logo from './Logo';
 
-export default function Carousel({imageA, imageB, imageC}) {
+export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor, stickerTextColor, logoTextColor}) {
 
+  {/* Note that if you add more than 3 images at a later date, you'll need to adjust the logic in this function */}
   function changeToSlide(n) {
     let slides = document.getElementsByClassName('slide');
     for (let i = 0; i < slides.length; i++) {
@@ -25,6 +28,8 @@ export default function Carousel({imageA, imageB, imageC}) {
           <div className="dot" onClick={() => changeToSlide(3)}></div>
         </div>
 
+        <Logo color={logoTextColor}/>
+        <Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor}/>
       </>
     );
   };
