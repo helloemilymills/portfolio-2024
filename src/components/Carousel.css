@@ -1,0 +1,29 @@
+.carousel-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 5vh;
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: grey;
+    margin: 5px;
+}
+
+img {
+    width: 100vw;
+    min-width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
