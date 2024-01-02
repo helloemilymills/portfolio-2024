@@ -20,6 +20,11 @@
     border: 2px solid white;
     background-color: black;
     margin: 5px;
+    transition: 100ms ease-in-out;
+}
+
+.dot:hover {
+    transform: scale(1.25);
 }
 
 img {
