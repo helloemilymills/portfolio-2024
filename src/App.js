@@ -7,11 +7,13 @@ import image1A from './images/example1.jpg';
 import image1B from './images/example2.jpg';
 import image1C from './images/example3.jpg';
 
+
+
 export default function App() {
   return (
     <>
-      <Logo/>
-      <Sticker/>
+      <Logo color="black"/>
+      <Sticker color="black"/>
       <Carousel imageA={image1A} imageB={image1B} imageC={image1C}/>
     </>
   );
