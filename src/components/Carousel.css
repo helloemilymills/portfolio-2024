@@ -5,18 +5,20 @@
 
 .dots-container {
     position: absolute;
+    width: 100vw;
     bottom: 5vh;
     display: flex;
     flex-direction: row;
-    
-    
+    justify-content: center;
+    opacity: .5;
 }
 
 .dot {
     width: 15px;
     height: 15px;
     border-radius: 50px;
-    background-color: grey;
+    border: 2px solid white;
+    background-color: black;
     margin: 5px;
 }
 
