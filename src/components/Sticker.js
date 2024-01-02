@@ -1,5 +1,4 @@
 import './Sticker.css';
-import stickerDetail from '../images/See_More_Sticker.png'
 
 export default function Sticker() {
     return (
