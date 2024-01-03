@@ -1,8 +1,16 @@
+import { useState } from 'react';
 import './Carousel.css';
 import Sticker from './Sticker';
 import Logo from './Logo';
+import ProjectDrawer from './ProjectDrawer';
 
 export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor, stickerTextColor, logoTextColor}) {
+
+  const [drawerState, setDrawerState] = useState(false);
+
+  function toggleDrawerState() {
+    drawerState ? setDrawerState(false) : setDrawerState(true)
+  }
 
   {/* Note that if you add more than 3 images at a later date, you'll need to adjust the logic in this function */}
   function changeToSlide(n) {
@@ -29,7 +37,11 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
         </div>
 
         <Logo color={logoTextColor}/>
-        <Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor}/>
+
+        {drawerState ? (<ProjectDrawer/>) 
+            : (<div onClick={() => toggleDrawerState()}>
+                <Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor}/>
+              </div>)}
       </>
     );
   };
