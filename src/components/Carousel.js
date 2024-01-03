@@ -38,7 +38,7 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
 
         <Logo color={logoTextColor}/>
 
-        {drawerState ? (<ProjectDrawer/>) 
+        {drawerState ? (<ProjectDrawer closeDrawer={toggleDrawerState}/>) 
             : (<div onClick={() => toggleDrawerState()}>
                 <Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor}/>
               </div>)}
