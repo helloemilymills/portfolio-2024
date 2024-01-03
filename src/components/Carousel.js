@@ -3,6 +3,7 @@ import './Carousel.css';
 import Sticker from './Sticker';
 import Logo from './Logo';
 import ProjectDrawer from './ProjectDrawer';
+import ContactPanel from './ContactPanel';
 
 export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor, stickerTextColor, logoTextColor}) {
 
@@ -37,6 +38,7 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
         </div>
 
         <Logo color={logoTextColor}/>
+        {/* <ContactPanel/> */}
 
         {drawerState ? (<ProjectDrawer closeDrawer={toggleDrawerState}/>) 
             : (<div onClick={() => toggleDrawerState()}>

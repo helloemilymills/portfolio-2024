@@ -1,13 +1,27 @@
-.button {
+.buttonGradient {
     background-image: linear-gradient( 45deg,  rgba(31,212,248,1) 11%, rgba(218,15,183,1) 74.9% );
-    color: white;
+    padding: 4px;
+    border-radius: 2px;
+    margin-top: 5vh;
+    display: inline-block;
+}
+
+.buttonGradient:hover {
+    background-image: linear-gradient( 45deg,  rgba(218,15,183,1) 11%, rgba(31,212,248,1) 74.9% );
+    cursor: pointer;
+}
+
+.button {
+    color: black;
+    background-color: white;
     padding: 12px 15px 10px;
     border: none;
     border-radius: 2px;
     display: inline-block;
-    margin-top: 5vh;
+    
 }
 
-.button h4 {
+.button p {
     margin: 0;
+    font-size: 20px;
 }

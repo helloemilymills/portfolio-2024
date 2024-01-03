@@ -26,9 +26,10 @@ h2 {
     position: absolute;
     top: 5vh; 
     right: 5vh; 
-    transition: 100ms ease-in-out;
+    transition: 200ms ease-in-out;
 }
 
 #closeIcon:hover {
-    transform: scale(1.25);
+    transform: rotate(-90deg);
+    cursor: pointer;
 }

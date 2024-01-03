@@ -9,9 +9,10 @@ export default function ButtonCTA() {
 
     return (
       <>
-        
-        <div className='button'>
-          <h4>Work With Me</h4>
+        <div className='buttonGradient'>
+          <div className='button'>
+            <p> work with me </p>
+          </div>
         </div>
         
       </>

@@ -1,0 +1,19 @@
+/* .panel {
+    position: absolute;
+    top: 5vh;
+    left: 5vh;
+    width: calc(100% - 10vh);
+    height: 90vh;
+    background-color: black;
+    color: white;
+} */
+
+.panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    
+}
