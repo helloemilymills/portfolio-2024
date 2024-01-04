@@ -5,7 +5,7 @@ import Logo from './Logo';
 import ProjectDrawer from './ProjectDrawer';
 
 
-export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor, stickerTextColor, logoTextColor}) {
+export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor, stickerTextColor, logoTextColor, projectTitle, projectInfo}) {
 
   const [drawerState, setDrawerState] = useState(false);
 
@@ -40,7 +40,7 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
         <Logo color={logoTextColor}/>
   
 
-        {drawerState ? (<ProjectDrawer closeDrawer={toggleDrawerState}/>) 
+        {drawerState ? (<ProjectDrawer closeDrawer={toggleDrawerState} projectTitle={projectTitle} projectInfo={projectInfo}/>) 
             : (<div onClick={() => toggleDrawerState()}>
                 <Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor}/>
               </div>)}

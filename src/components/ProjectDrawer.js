@@ -1,14 +1,15 @@
 import './ProjectDrawer.css'
 import ButtonCTA from './ButtonCTA';
 
-export default function ProjectDrawer({closeDrawer}) {
+export default function ProjectDrawer({closeDrawer, projectTitle, projectInfo}) {
   
      return (
       <>
         <div className='gradientEdge'>
           <div className='drawerContainer'>
-            <h2>Wild Betty</h2>
-            <p>project info here</p>
+            <h2>{projectTitle}</h2>
+            {/* may want to map through an array for project info bullet points? */}
+            <p>{projectInfo}</p>
             <ButtonCTA/>
           </div>
           <svg onClick = {() => closeDrawer()}id="closeIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
