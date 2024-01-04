@@ -1,11 +1,11 @@
 import './Sticker.css';
 
-export default function Sticker({backgroundColor, textColor}) {
+export default function Sticker({backgroundColor, textColor, toggleDrawerState}) {
 
 
     return (
       <>
-        <div className='outerGradientShape'>
+        <div className='outerGradientShape' onClick={() => toggleDrawerState()}>
           <div className="stickerShape" style={{backgroundColor: backgroundColor}}>
             <svg className="stickerSVG" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M28.21 26.45L29.73 25.24C30.45 26.13 31.41 26.39 32.59 25.44C33.42 24.78 33.71 24.02 33.2 23.38C31.78 21.61 27.87 25.6 25.72 22.9C24.67 21.59 24.95 19.77 26.75 18.33C28.52 16.91 30.35 16.97 31.7 18.66L30.36 19.73C29.73 18.95 28.82 18.79 27.78 19.62C26.89 20.34 26.84 21.03 27.21 21.49C28.51 23.12 32.33 19.15 34.62 22.01C35.81 23.5 35.42 25.37 33.6 26.83C31.87 28.21 29.81 28.44 28.21 26.45Z" fill={textColor}/>

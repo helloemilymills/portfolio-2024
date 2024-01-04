@@ -1,5 +1,7 @@
 import { useState } from 'react';
+
 import './Carousel.css';
+
 import Sticker from './Sticker';
 import Logo from './Logo';
 import ProjectDrawer from './ProjectDrawer';
@@ -11,6 +13,17 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
 
   function toggleDrawerState() {
     drawerState ? setDrawerState(false) : setDrawerState(true)
+  }
+  
+  const [contactFormState, setContactFormState] = useState(false);
+
+  function toggleContactFormState() {
+    contactFormState ? setContactFormState(false) : setContactFormState(true)
+  }
+
+  function closeDrawerOpenContactForm() {
+    setDrawerState(false);
+    setContactFormState(true);
   }
 
   {/* Note that if you add more than 3 images at a later date, you'll need to adjust the logic in this function */}
@@ -39,12 +52,11 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
 
         <Logo color={logoTextColor}/>
   
-        <ContactPanel/>
+        {contactFormState && <ContactPanel closeContactForm={toggleContactFormState}/>}
 
-        {drawerState ? (<ProjectDrawer closeDrawer={toggleDrawerState} projectTitle={projectTitle} projectInfo={projectInfo}/>) 
-            : (<div onClick={() => toggleDrawerState()}>
-                <Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor}/>
-              </div>)}
+        {drawerState && !contactFormState ? (<ProjectDrawer closeDrawer={toggleDrawerState} closeDrawerOpenContactForm={closeDrawerOpenContactForm} projectTitle={projectTitle} projectInfo={projectInfo}/>) 
+            : (<Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor} toggleDrawerState={toggleDrawerState}/>)
+    }   
       </>
     );
   };
