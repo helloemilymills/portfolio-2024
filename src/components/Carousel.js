@@ -51,9 +51,9 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
         </div>
 
         <Logo color={logoTextColor}/>
-        {contactFormState && <ContactPanel closeContactForm={toggleContactFormState}/>}
+        {contactFormState && <ContactPanel closeContactForm={toggleContactFormState} drawerState={drawerState}/>}
 
-        {drawerState && !contactFormState ? (<ProjectDrawer closeDrawer={toggleDrawerState} closeDrawerOpenContactForm={closeDrawerOpenContactForm} projectTitle={projectTitle} projectInfo={projectInfo}/>) 
+        {drawerState && !contactFormState ? (<ProjectDrawer closeDrawer={toggleDrawerState} closeDrawerOpenContactForm={closeDrawerOpenContactForm} projectTitle={projectTitle} projectInfo={projectInfo} drawerState={drawerState}/>) 
             : (<Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor} toggleDrawerState={toggleDrawerState}/>)
     }   
       </>

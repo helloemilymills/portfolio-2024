@@ -1,12 +1,18 @@
 import './ButtonCTA.css'
 
-export default function ButtonCTA({closeDrawerOpenContactForm}) {
+export default function ButtonCTA({text, closeDrawerOpenContactForm, drawerState}) {
+
+    function toggleOnClick() {
+      drawerState && closeDrawerOpenContactForm()
+    }
+
+    // onClick = {() => closeDrawerOpenContactForm()}
 
     return (
       <>
-        <div className='buttonGradient' onClick = {() => closeDrawerOpenContactForm()}>
+        <div className='buttonGradient' onClick = {() => toggleOnClick()}>
           <div className='button'>
-            <p> work with me </p>
+            <p> {text} </p>
           </div>
         </div>
         

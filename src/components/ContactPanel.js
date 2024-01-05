@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import './ContactPanel.css'
+import ButtonCTA from './ButtonCTA';
 
 //this form is linked with my Herotofu account
 const FORM_ENDPOINT = "https://public.herotofu.com/v1/9bd05320-aa9e-11ee-8fa9-872d80d8eac1";
 
-export default function ContactPanel({ closeContactForm }) {
+export default function ContactPanel({ closeContactForm, drawerState }) {
 
   const [submitted, setSubmitted] = useState(false);
 
@@ -34,11 +35,14 @@ export default function ContactPanel({ closeContactForm }) {
         }
 
         setSubmitted(true);
+        e.reset();
       })
       .catch((err) => {
         // Submit the form manually
         e.target.submit();
       });
+      // document.getElementsByClassName("contactForm").reset();
+      
   };
 
   return (
@@ -106,11 +110,7 @@ export default function ContactPanel({ closeContactForm }) {
             </div>
             <div className='inputContainer'>
               <label for="communicationPreferences">How do you prefer to communicate?</label>
-              <div className='sideBySide'>
-                <label><input type="checkbox" name="communicationPreferences" value="email" /> Email</label>
-                <label><input type="checkbox" name="communicationPreferences" value="phone" /> Phone</label>
-                <label><input type="checkbox" name="communicationPreferences" value="video" /> Video Meeting</label>
-              </div>
+              <input type="text" name="communicationPreferences" required />
             </div>
             <p>In order to do my best work, I need a thorough understanding of your project. Here are 10 questions to get our conversation started. </p>
 
@@ -147,22 +147,26 @@ export default function ContactPanel({ closeContactForm }) {
               <textarea name="timeline" required />
             </div>
             <div className='inputContainer'>
-              <label for="expectations">What are your expecations of me?</label>
+              <label for="expectations">What are your expecations?</label>
               <textarea name="expectations" required />
             </div>
             <div className='inputContainer'>
               <label for="extraInfo">Is there anything else you'd like to add?</label>
               <textarea name="extraInfo" />
             </div>
+            
+            <div className='sideBySide'>
+              <button className="formSubmitButton" type="submit">
+                <ButtonCTA text="submit form" drawerState={drawerState}/>
+              </button>
+              {submitted && (<div>Received! Thank you :)</div>)}
+            </div>
 
-
-
-
-            <button className="formSubmitButton" type="submit"> Send a message </button>
+            {/* herotofu recommends using a hidden input named "_gotcha" as spam protection. I've tested it and it does work :) */}
             <div style={{ textIndent: "-99999px", whiteSpace: "nowrap", overflow: "hidden", position: "absolute" }} aria-hidden="true">
               <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
             </div>
-            {submitted && (<div>Hooray! I'll reach out to you within 3 business days with next steps.</div>)}
+
           </form>
         </div>
 
