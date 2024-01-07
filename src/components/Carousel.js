@@ -7,7 +7,7 @@ import Logo from './Logo';
 import ProjectDrawer from './ProjectDrawer';
 import ContactPanel from './ContactPanel';
 
-export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor, stickerTextColor, logoTextColor, projectTitle, projectInfo}) {
+export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor, stickerTextColor, logoTextColor, projectTitle, projectIntro, notableElements, providedAssets}) {
 
   const [drawerState, setDrawerState] = useState(false);
 
@@ -53,7 +53,7 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
         <Logo color={logoTextColor}/>
         {contactFormState && <ContactPanel closeContactForm={toggleContactFormState} drawerState={drawerState}/>}
 
-        {drawerState && !contactFormState ? (<ProjectDrawer closeDrawer={toggleDrawerState} closeDrawerOpenContactForm={closeDrawerOpenContactForm} projectTitle={projectTitle} projectInfo={projectInfo} drawerState={drawerState}/>) 
+        {drawerState && !contactFormState ? (<ProjectDrawer closeDrawer={toggleDrawerState} closeDrawerOpenContactForm={closeDrawerOpenContactForm} projectTitle={projectTitle} projectIntro={projectIntro} notableElements={notableElements} providedAssets={providedAssets} drawerState={drawerState}/>) 
             : (<Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor} toggleDrawerState={toggleDrawerState}/>)
     }   
       </>

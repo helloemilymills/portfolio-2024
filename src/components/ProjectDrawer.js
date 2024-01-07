@@ -1,15 +1,22 @@
 import './ProjectDrawer.css'
 import ButtonCTA from './ButtonCTA';
 
-export default function ProjectDrawer({closeDrawer, closeDrawerOpenContactForm, projectTitle, projectInfo, drawerState}) {
-  
+export default function ProjectDrawer({closeDrawer, closeDrawerOpenContactForm, projectTitle, projectIntro, notableElements, providedAssets, drawerState}) {
+
      return (
       <>
         <div className='gradientEdge'>
           <div className='drawerContainer'>
             <h2>{projectTitle}</h2>
-            {/* may want to map through an array for project info bullet points? */}
-            <p>{projectInfo}</p>
+            <p>{projectIntro}</p>
+            <p><strong>Notable Elements:</strong></p>
+            <ul>
+              {notableElements.map((x, i) => <li key={i}>{x}</li>)}
+            </ul>
+            <p><strong>Provided Assets:</strong></p>
+            <ul>
+              {providedAssets.map((x, i) => <li key={i}>{x}</li>)}
+            </ul>
             <ButtonCTA text="work with me" closeDrawerOpenContactForm={closeDrawerOpenContactForm} drawerState={drawerState}/>
           </div>
           <svg onClick = {() => closeDrawer()} id="closeIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
