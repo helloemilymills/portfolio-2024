@@ -11,8 +11,10 @@ export default function App() {
 
   const projectTitle1 = "Wild Betty";
   const projectIntro1 = "Billy's Brew, a coastal craft beer co, requested a label design for the launch of their new signature beer, 'Wild Betty'. The design needed to resonate with the brand's coastal lifestyle without being cliché.";
-  const notableElements = ["Custom Diecuts", "Octopus Illustration"]
-  const providedAssets = ["Billy's Brew logos", "Copy"]
+  const notableElements = ["3 Custom Diecuts", "Original Illustration", "Blue Foil Embellishment"]
+  
+  //not sure if I want to include this. might confuse readers
+  const providedAssets = ["Billy's Brew logos", "Label Copy"]
 
   return (
     <>

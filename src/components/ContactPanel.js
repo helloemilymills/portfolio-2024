@@ -157,7 +157,7 @@ export default function ContactPanel({ closeContactForm, drawerState }) {
             
             <div className='sideBySide'>
               <button className="formSubmitButton" type="submit">
-                <ButtonCTA text="submit form" drawerState={drawerState}/>
+                <ButtonCTA text="Submit form" drawerState={drawerState}/>
               </button>
               {submitted && (<div>Received! Thank you :)</div>)}
             </div>
