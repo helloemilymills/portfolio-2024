@@ -26,7 +26,7 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
     setContactFormState(true);
   }
 
-  {/* Note that if you add more than 3 images at a later date, you'll need to adjust the logic in this function */}
+  // Note that if you add more than 3 images at a later date, you'll need to adjust the logic in this function
   function changeToSlide(n) {
     let slides = document.getElementsByClassName('slide');
     for (let i = 0; i < slides.length; i++) {
