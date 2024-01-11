@@ -2,8 +2,8 @@ import './App.css';
 import Carousel from './components/Carousel.js';
 
 import image1A from './images/Wild Betty Beer Bottles Mockup.png';
-import image1B from './images/Wild Betty Billboard Mockup.png';
-import image1C from './images/Wild Betty Labels.png';
+import image1B from './images/Wild Betty Labels.png';
+import image1C from './images/Wild Betty Billboard Mockup.png';
 
 
 
