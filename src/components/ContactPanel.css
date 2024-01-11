@@ -32,6 +32,29 @@
     width: 50%;
 }
 
+.profilePictureContainer {
+    margin-top: 20px;
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.profilePicture {
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+}
+
+.aboutText {
+    width: 70%;
+}
+
 .column2 {
     overflow-y: scroll;
     scrollbar-width: thin;

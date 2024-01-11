@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './ContactPanel.css'
 import ButtonCTA from './ButtonCTA';
+import profilePicutre from '../images/April 2023 Profile.jpg'
 
 //this form is linked with my Herotofu account
 const FORM_ENDPOINT = "https://public.herotofu.com/v1/9bd05320-aa9e-11ee-8fa9-872d80d8eac1";
@@ -55,7 +56,10 @@ export default function ContactPanel({ closeContactForm, drawerState }) {
 
         <div className='column column1'>
           <h2>A bit about me</h2>
-          <p>Lorem ipsum </p>
+          <div className="profilePictureContainer">
+            <img className="profilePicture" src={profilePicutre} alt="Emily's profile picture. Dressed in a white linen button up and wearing her hair down, she sits on a chair and smiles at the camera."/>
+          </div>
+          <p className='aboutText'>I'm a Design Consultant, hobby sewist, Communication Design student, and dabbler in web development. What ties all that together? My love for making. There are few things more satisfying than bringing an idea to life.  </p>
           <div className='socialIconsContainer'>
             <a href='https://www.instagram.com/helloemilymills/' target='_blank'>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
