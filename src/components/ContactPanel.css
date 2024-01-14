@@ -126,7 +126,6 @@ p {
 
 .formSubmitButton {
     all:unset;
-    margin-bottom: 5vh;
 }
 
 .sideBySide {
@@ -147,11 +146,18 @@ p {
         height: auto;
     }
 
+    .aboutText {
+        width: 100%;
+    }
+
     .column2 {
         all: unset;
     }
 
-    .aboutText {
-        width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    .sideBySide {
+        flex-direction: column;
     }
   }
