@@ -32,3 +32,11 @@
         transform: rotate(-360deg);
     }
 }
+
+
+@media (max-width: 500px) {
+    .outerGradientShape {
+        bottom: 2.5vh;
+        right: 2.5vh;
+    }
+  }

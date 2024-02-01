@@ -32,7 +32,7 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
     let dots = document.getElementsByClassName('dot');
     for (let i = 0; i < slides.length; i++) {
       slides[i] !== slides[n-1] ? slides[i].style.display = 'none' : slides[i].style.display = 'block';
-      dots[i] == dots[n-1] ? dots[i].style.transform = 'scale(1.25)' : dots[i].style.transform = 'scale(1)';
+      dots[i] === dots[n-1] ? dots[i].style.transform = 'scale(1.25)' : dots[i].style.transform = 'scale(1)';
     }; 
   };
 
