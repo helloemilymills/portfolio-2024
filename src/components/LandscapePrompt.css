@@ -1,6 +1,4 @@
-.gradientBackgroundPanel {
-    display: none;
-}
+
 
 @media (orientation: portrait) {
     .promptGradientBackgroundPanel {
