@@ -38,9 +38,9 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
       <>
 
         <div className="carousel-container">
-          <img className="slide" id="slide 1" src={imageA} alt=""/>
-          <img className="slide" id="slide 2" src={imageB} alt=""/>
-          <img className="slide" id="slide 3" src={imageC} alt=""/>
+          <img className="slide" id="slide1" src={imageA} alt=""/>
+          <img className="slide" id="slide2" src={imageB} alt=""/>
+          <img className="slide" id="slide3" src={imageC} alt=""/>
         </div>     
 
         {/*dots*/}
