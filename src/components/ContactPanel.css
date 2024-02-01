@@ -149,7 +149,7 @@ p {
 }
 
 @media (max-width: 900px) {
-    .panel {
+    .contactPanel {
         flex-direction: column; 
     }
 
