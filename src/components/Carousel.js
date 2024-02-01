@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './Carousel.css';
 
@@ -43,6 +43,19 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
     }; 
   };
 
+ 
+    const [prompt, setPrompt] = useState('');
+  
+    useEffect(() => {
+      // Use setTimeout to setPrompt after time delay
+      const timeoutId = setTimeout(() => {
+        setPrompt(<LandscapePrompt closeLandscapePrompt={toggleLandscapePromptState}/>);
+      }, 5000);
+  
+      // Cleanup function to clear the timeout if the component unmounts
+      return () => clearTimeout(timeoutId);
+    }, []); // Empty dependency array ensures the effect runs only once
+  
     return (
       <>
 
@@ -64,9 +77,10 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
 
         {drawerState && !contactFormState ? (<ProjectDrawer closeDrawer={toggleDrawerState} closeDrawerOpenContactForm={closeDrawerOpenContactForm} projectTitle={projectTitle} projectIntro={projectIntro} notableElements={notableElements} providedAssets={providedAssets} drawerState={drawerState}/>) 
             : (<Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor} toggleDrawerState={toggleDrawerState}/>)
-    }   
+        }   
 
-        {(landscapePromptState && (!drawerState && !contactFormState)) && <LandscapePrompt closeLandscapePrompt={toggleLandscapePromptState}/>}
+        {(landscapePromptState && (!drawerState && !contactFormState)) && prompt}
+      
 
       </>
     );
