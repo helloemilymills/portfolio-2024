@@ -48,13 +48,11 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
   
     useEffect(() => {
       // Use setTimeout to setPrompt after time delay
-      const timeoutId = setTimeout(() => {
+     setTimeout(() => {
         setPrompt(<LandscapePrompt closeLandscapePrompt={toggleLandscapePromptState}/>);
       }, 5000);
-  
-      // Cleanup function to clear the timeout if the component unmounts
-      return () => clearTimeout(timeoutId);
-    }, []); // Empty dependency array ensures the effect runs only once
+    }
+    )
   
     return (
       <>
