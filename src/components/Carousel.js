@@ -8,7 +8,7 @@ import ProjectDrawer from './ProjectDrawer';
 import ContactPanel from './ContactPanel';
 import LandscapePrompt from './LandscapePrompt';
 
-export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor, stickerTextColor, logoTextColor, projectTitle, projectIntro, notableElements, providedAssets}) {
+export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor, stickerTextColor, logoTextColor, projectTitle, brief, designDirection, notableElements, providedAssets, uniProjectDisclaimer}) {
 
   const [drawerState, setDrawerState] = useState(false);
 
@@ -73,7 +73,7 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
         <Logo color={logoTextColor}/>
         {contactFormState && <ContactPanel closeContactForm={toggleContactFormState} drawerState={drawerState}/>}
 
-        {drawerState && !contactFormState ? (<ProjectDrawer closeDrawer={toggleDrawerState} closeDrawerOpenContactForm={closeDrawerOpenContactForm} projectTitle={projectTitle} projectIntro={projectIntro} notableElements={notableElements} providedAssets={providedAssets} drawerState={drawerState}/>) 
+        {drawerState && !contactFormState ? (<ProjectDrawer closeDrawer={toggleDrawerState} closeDrawerOpenContactForm={closeDrawerOpenContactForm} projectTitle={projectTitle} brief={brief} designDirection={designDirection} notableElements={notableElements} providedAssets={providedAssets} drawerState={drawerState} uniProjectDisclaimer={uniProjectDisclaimer}/>) 
             : (<Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor} toggleDrawerState={toggleDrawerState}/>)
         }   
 
