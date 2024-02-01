@@ -1,0 +1,37 @@
+.gradientBackgroundPanel {
+    display: none;
+}
+
+@media (orientation: portrait) {
+    .promptGradientBackgroundPanel {
+        background-image: linear-gradient( 45deg,  rgba(31,212,248,1) 11%, rgba(218,15,183,1) 74.9% );
+        z-index: 10;
+        width: calc(100vw - 10vh);
+        height: 20vh;
+        position: absolute;
+        top: 5vh;
+        left: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: .98;
+    }
+    
+    .promptPanel {
+        z-index: 11;
+        width: calc(100vw - 10vh - 8px);
+        height: calc(20vh - 8px);
+        background-color: #0b090a;
+        color: #ffffff;
+        padding: 5vh;
+        padding-right: 10vh;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        opacity: .98;
+    }
+
+    p {
+        margin: 0;
+    }
+}

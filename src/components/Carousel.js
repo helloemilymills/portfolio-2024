@@ -6,6 +6,7 @@ import Sticker from './Sticker';
 import Logo from './Logo';
 import ProjectDrawer from './ProjectDrawer';
 import ContactPanel from './ContactPanel';
+import LandscapePrompt from './LandscapePrompt';
 
 export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor, stickerTextColor, logoTextColor, projectTitle, projectIntro, notableElements, providedAssets}) {
 
@@ -19,6 +20,12 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
 
   function toggleContactFormState() {
     contactFormState ? setContactFormState(false) : setContactFormState(true)
+  }
+
+  const [landscapePromptState, setLandscapePromptState] = useState(true);
+
+  function toggleLandscapePromptState() {
+    landscapePromptState ? setLandscapePromptState(false) : setLandscapePromptState(true)
   }
 
   function closeDrawerOpenContactForm() {
@@ -58,6 +65,9 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
         {drawerState && !contactFormState ? (<ProjectDrawer closeDrawer={toggleDrawerState} closeDrawerOpenContactForm={closeDrawerOpenContactForm} projectTitle={projectTitle} projectIntro={projectIntro} notableElements={notableElements} providedAssets={providedAssets} drawerState={drawerState}/>) 
             : (<Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor} toggleDrawerState={toggleDrawerState}/>)
     }   
+
+        {(landscapePromptState && (!drawerState && !contactFormState)) && <LandscapePrompt closeLandscapePrompt={toggleLandscapePromptState}/>}
+
       </>
     );
   };
