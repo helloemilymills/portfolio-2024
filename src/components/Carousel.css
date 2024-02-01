@@ -1,3 +1,5 @@
+
+/*update this if you add more carousel slides. they all need to be display none except the first one*/
 #slide2, #slide3 {
     display: none;
 }
