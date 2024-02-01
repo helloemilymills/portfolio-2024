@@ -1,7 +1,7 @@
 
 
 @media (orientation: portrait) {
-    .promptGradientBackgroundPanel {
+    .promptGradientBackground {
         background-image: linear-gradient( 45deg,  rgba(31,212,248,1) 11%, rgba(218,15,183,1) 74.9% );
         z-index: 10;
         width: calc(100vw - 10vh);
@@ -31,5 +31,17 @@
 
     p {
         margin: 0;
+    }
+
+    #promptCloseIcon {
+        position: absolute;
+        top: 5vh; 
+        right: 5vh; 
+        transition: 200ms ease-in-out;
+    }
+    
+    #promptCloseIcon:hover {
+        transform: rotate(-90deg);
+        cursor: pointer;
     }
 }

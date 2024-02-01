@@ -1,4 +1,16 @@
-.gradientBackgroundPanel {
+#panelCloseIcon {
+    position: absolute;
+    top: 5vh; 
+    right: 5vh; 
+    transition: 200ms ease-in-out;
+}
+
+#panelCloseIcon:hover {
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+.contactPanelGradientBackground {
     background-image: linear-gradient( 45deg,  rgba(31,212,248,1) 11%, rgba(218,15,183,1) 74.9% );
     z-index: 10;
     position: absolute;
@@ -12,7 +24,7 @@
     opacity: .98;
 }
 
-.panel {
+.contactPanel {
     z-index: 11;
     width: calc(100vw - 10vh - 8px);
     height: calc(90vh - 8px);
@@ -30,15 +42,15 @@
     padding-right: 5vh;
 }
 
-.panel::-webkit-scrollbar {
+.contactPanel::-webkit-scrollbar {
     width: 2.5px;
   }
   
-.panel::-webkit-scrollbar-thumb {
+.contactPanel::-webkit-scrollbar-thumb {
 background-color: grey; /* Set thumb color for Chrome and Safari */
 }
 
-.panel::-webkit-scrollbar-track {
+.contactPanel::-webkit-scrollbar-track {
 background-color: #0b090a; /* Set track color for Chrome and Safari */
 }
 

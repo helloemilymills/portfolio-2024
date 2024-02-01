@@ -1,4 +1,4 @@
-.outerGradientShape {
+.stickerOuterGradientShape {
     position: absolute;
     bottom: 5vh;
     right: 5vh;
@@ -12,7 +12,7 @@
     background-image: linear-gradient( 45deg,  rgba(31,212,248,1) 11%, rgba(218,15,183,1) 74.9% );
 }
 
-.outerGradientShape:hover {
+.stickerOuterGradientShape:hover {
     background-image: linear-gradient( 45deg,  rgba(218,15,183,1) 11%, rgba(31,212,248,1) 74.9% );
     cursor: pointer;
 }

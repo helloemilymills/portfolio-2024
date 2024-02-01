@@ -1,4 +1,4 @@
-.gradientEdge {
+.projectDrawerGradientEdge {
     position: absolute;
     right: 0;
     top: 0;
@@ -10,7 +10,7 @@
     opacity: .98;
 }
 
-.drawerContainer {
+.drawerPanel {
     width: 396px;
     background-color: #0b090a;
     padding: 5vh;
@@ -23,15 +23,15 @@
     padding-right: 5vh;
 }
 
-.drawerContainer::-webkit-scrollbar {
+.drawerPanel::-webkit-scrollbar {
     width: 2.5px;
   }
   
-.drawerContainer::-webkit-scrollbar-thumb {
+.drawerPanel::-webkit-scrollbar-thumb {
 background-color: grey; /* Set thumb color for Chrome and Safari */
 }
 
-.drawerContainer::-webkit-scrollbar-track {
+.drawerPanel::-webkit-scrollbar-track {
 background-color: #0b090a; /* Set track color for Chrome and Safari */
 }
 
@@ -40,14 +40,14 @@ h2 {
     font-weight: 900;
 }
 
-#closeIcon {
+#drawerCloseIcon {
     position: absolute;
     top: 5vh; 
     right: 5vh; 
     transition: 200ms ease-in-out;
 }
 
-#closeIcon:hover {
+#drawerCloseIcon:hover {
     transform: rotate(-90deg);
     cursor: pointer;
 }
