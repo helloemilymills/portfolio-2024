@@ -4,6 +4,10 @@
     display: none;
 }
 
+#dot1 {
+    transform: scale(1.25);
+}
+
 .carousel-container {
     display: flex;
     flex-direction: row;
@@ -30,7 +34,6 @@
 }
 
 .dot:hover {
-    transform: scale(1.25);
     cursor: pointer;
 }
 

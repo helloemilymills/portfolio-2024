@@ -29,8 +29,10 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
   // Note that if you add more than 3 images at a later date, you'll need to adjust the logic in this function
   function changeToSlide(n) {
     let slides = document.getElementsByClassName('slide');
+    let dots = document.getElementsByClassName('dot');
     for (let i = 0; i < slides.length; i++) {
       slides[i] !== slides[n-1] ? slides[i].style.display = 'none' : slides[i].style.display = 'block';
+      dots[i] == dots[n-1] ? dots[i].style.transform = 'scale(1.25)' : dots[i].style.transform = 'scale(1)';
     }; 
   };
 
@@ -45,9 +47,9 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
 
         {/*dots*/}
         <div className="dots-container">
-          <div className="dot" onClick={() => changeToSlide(1)}></div>
-          <div className="dot" onClick={() => changeToSlide(2)}></div>
-          <div className="dot" onClick={() => changeToSlide(3)}></div>
+          <div className="dot" id="dot1" onClick={() => changeToSlide(1)}></div>
+          <div className="dot" id="dot2" onClick={() => changeToSlide(2)}></div>
+          <div className="dot" id="dot3" onClick={() => changeToSlide(3)}></div>
         </div>
 
         <Logo color={logoTextColor}/>
