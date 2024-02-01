@@ -16,12 +16,14 @@
     position: absolute;
     top: 5vh;
     left: 5vh;
+    bottom: 5vh;
     width: calc(100vw - 10vh);
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: .98;
+
 }
 
 .contactPanel {
@@ -47,11 +49,11 @@
   }
   
 .contactPanel::-webkit-scrollbar-thumb {
-background-color: grey; /* Set thumb color for Chrome and Safari */
+    background-color: grey; /* Set thumb color for Chrome and Safari */
 }
 
 .contactPanel::-webkit-scrollbar-track {
-background-color: #0b090a; /* Set track color for Chrome and Safari */
+    background-color: #0b090a; /* Set track color for Chrome and Safari */
 }
 
 .column {
@@ -61,7 +63,7 @@ background-color: #0b090a; /* Set track color for Chrome and Safari */
 }
 
 .profilePictureContainer {
-    margin-top: 20px;
+    margin: 20px 0;
     background-color: black;
     width: 200px;
     height: 200px;
@@ -77,6 +79,10 @@ background-color: #0b090a; /* Set track color for Chrome and Safari */
     object-fit: contain;
     width: 200px;
     height: 200px;
+}
+
+.socialIconsContainer {
+    margin-top: 20px;
 }
 
 .aboutText {
@@ -95,13 +101,12 @@ background-color: #0b090a; /* Set track color for Chrome and Safari */
   }
   
 .column2::-webkit-scrollbar-thumb {
-background-color: grey; /* Set thumb color for Chrome and Safari */
+    background-color: grey; /* Set thumb color for Chrome and Safari */
 }
 
 .column2::-webkit-scrollbar-track {
-background-color: #0b090a; /* Set track color for Chrome and Safari */
+    background-color: #0b090a; /* Set track color for Chrome and Safari */
 }
-  
 
 .contactForm {
     display: flex;
