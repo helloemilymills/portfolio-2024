@@ -1,0 +1,39 @@
+.previousNextContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    padding: 4px;
+    border-radius: 2px;
+    background-image: linear-gradient( 45deg,  rgba(31,212,248,1) 11%, rgba(218,15,183,1) 74.9% );
+    z-index: 10;
+}
+
+.previousNextContainer:hover {
+    background-image: linear-gradient( 45deg,  rgba(218,15,183,1) 11%, rgba(31,212,248,1) 74.9% );
+}
+
+.previousNext {
+    border-radius: 2px;
+    background-color: white;
+    color: black;
+    padding: 2.5vh;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previousNext:hover {
+    cursor: pointer;
+}
+
+.previous {
+    margin-bottom: 4px;
+}
+
+.previousNextText {
+    margin: 0;
+    writing-mode: vertical-lr;
+    transform: scale(-1);
+}

@@ -13,6 +13,7 @@
         justify-content: center;
         align-items: center;
         opacity: .98;
+        border-radius: 2px;
     }
     
     .promptPanel {
@@ -27,6 +28,7 @@
         display: flex;
         flex-direction: column;
         opacity: .98;
+        border-radius: 2px;
     }
 
     p {

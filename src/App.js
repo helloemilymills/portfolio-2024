@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import Carousel from './components/Carousel.js';
 
 //wild betty beer
@@ -29,13 +30,32 @@ export default function App() {
   const notableElements2 = ["Custom Wordmark (Fiesta de Verano)", "Grid Structure"];
   const providedAssets2 = ["Brochure Text", "Images & Vector Art", "Brisbane City Council & Southbank Parklands Logos"];
 
-  return (
-    <>
-      {/* carousel accepts props for the images, as well as the background & text colours for the sticker & em logo (for best contrast against the photos) */}
-      <Carousel imageA={image1A} imageB={image1B} imageC={image1C} stickerBackgroundColor="white" stickerTextColor="black" logoTextColor="white" projectTitle={projectTitle1} brief={brief1} designDirection={designDirection1} notableElements={notableElements1} providedAssets={providedAssets1} uniProjectDisclaimer={uniProjectDisclaimer}/>
-      {/* <Carousel imageA={image2A} imageB={image2B} imageC={image2C} stickerBackgroundColor="white" stickerTextColor="black" logoTextColor="white" projectTitle={projectTitle2} brief={brief2} designDirection={designDirection2} notableElements={notableElements2} providedAssets={providedAssets2} uniProjectDisclaimer={uniProjectDisclaimer}/> */}
+  //counter shows matching carousel
+  const [carouselCounter, setCarouselCounter] = useState(1);
 
-    </>
-  );
+  function previousCarousel () {
+    (carouselCounter > 1) && setCarouselCounter(carouselCounter - 1)
+  }
+
+  function nextCarousel () {
+    (carouselCounter < 2) && setCarouselCounter(carouselCounter + 1)
+  }
+
+    return (
+      <>
+        <div className='previousNextContainer'>
+          <div className='previous previousNext' onClick={() => previousCarousel()}>
+            <p className='previousNextText'>Previous</p>
+          </div>
+          <div className='next previousNext' onClick={() => nextCarousel()}>
+            <p className='previousNextText'>Next</p>
+          </div>
+        </div>
+        
+        {(carouselCounter === 1) && <Carousel imageA={image1A} imageB={image1B} imageC={image1C} stickerBackgroundColor="white" stickerTextColor="black" logoTextColor="white" projectTitle={projectTitle1} brief={brief1} designDirection={designDirection1} notableElements={notableElements1} providedAssets={providedAssets1} uniProjectDisclaimer={uniProjectDisclaimer}/>}
+        {(carouselCounter === 2) && <Carousel imageA={image2A} imageB={image2B} imageC={image2C} stickerBackgroundColor="white" stickerTextColor="black" logoTextColor="white" projectTitle={projectTitle2} brief={brief2} designDirection={designDirection2} notableElements={notableElements2} providedAssets={providedAssets2} uniProjectDisclaimer={uniProjectDisclaimer}/>}
+
+      </>
+    )
 }
 
