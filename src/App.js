@@ -54,7 +54,6 @@ export default function App() {
         
         {(carouselCounter === 1) && <Carousel imageA={image1A} imageB={image1B} imageC={image1C} stickerBackgroundColor="white" stickerTextColor="black" logoTextColor="white" projectTitle={projectTitle1} brief={brief1} designDirection={designDirection1} notableElements={notableElements1} providedAssets={providedAssets1} uniProjectDisclaimer={uniProjectDisclaimer}/>}
         {(carouselCounter === 2) && <Carousel imageA={image2A} imageB={image2B} imageC={image2C} stickerBackgroundColor="white" stickerTextColor="black" logoTextColor="white" projectTitle={projectTitle2} brief={brief2} designDirection={designDirection2} notableElements={notableElements2} providedAssets={providedAssets2} uniProjectDisclaimer={uniProjectDisclaimer}/>}
-
       </>
     )
 }

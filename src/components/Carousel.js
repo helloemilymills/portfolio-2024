@@ -22,12 +22,6 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
     contactFormState ? setContactFormState(false) : setContactFormState(true)
   }
 
-  const [landscapePromptState, setLandscapePromptState] = useState(true);
-
-  function toggleLandscapePromptState() {
-    landscapePromptState ? setLandscapePromptState(false) : setLandscapePromptState(true)
-  }
-
   function closeDrawerOpenContactForm() {
     setDrawerState(false);
     setContactFormState(true);
@@ -43,16 +37,20 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
     }; 
   };
 
- 
-    const [prompt, setPrompt] = useState('');
-  
-    useEffect(() => {
-      // Use setTimeout to setPrompt after time delay
-     setTimeout(() => {
-        setPrompt(<LandscapePrompt closeLandscapePrompt={toggleLandscapePromptState}/>);
-      }, 5000);
-    }
-    )
+  const [landscapePromptState, setLandscapePromptState] = useState(true);
+
+  function toggleLandscapePromptState() {
+    landscapePromptState ? setLandscapePromptState(false) : setLandscapePromptState(true)
+  }
+
+  //delay lanscape prompt
+  const [prompt, setPrompt] = useState('');
+  useEffect(() => {
+    // Use setTimeout to setPrompt after time delay
+  setTimeout(() => {
+      setPrompt(<LandscapePrompt closeLandscapePrompt={toggleLandscapePromptState}/>);
+    }, 10000);
+  })
   
     return (
       <>
@@ -75,10 +73,8 @@ export default function Carousel({imageA, imageB, imageC, stickerBackgroundColor
 
         {drawerState && !contactFormState ? (<ProjectDrawer closeDrawer={toggleDrawerState} closeDrawerOpenContactForm={closeDrawerOpenContactForm} projectTitle={projectTitle} brief={brief} designDirection={designDirection} notableElements={notableElements} providedAssets={providedAssets} drawerState={drawerState} uniProjectDisclaimer={uniProjectDisclaimer}/>) 
             : (<Sticker backgroundColor={stickerBackgroundColor} textColor={stickerTextColor} toggleDrawerState={toggleDrawerState}/>)
-        }   
-
+        }         
         {(landscapePromptState && (!drawerState && !contactFormState)) && prompt}
-      
 
       </>
     );
