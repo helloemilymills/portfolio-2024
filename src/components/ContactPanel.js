@@ -59,7 +59,7 @@ export default function ContactPanel({ closeContactForm, drawerState }) {
           <div className="profilePictureContainer">
             <img className="profilePicture" src={profilePicutre} alt="Emily sits backwards on a chair and smiles at the camera. She wears her hair down and is dressed in a white linen button up top."/>
           </div>
-          <p className='aboutText'>I'm a Design Consultant, hobby sewist, Communication Design student, and dabbler in web development. What ties all that together? My love for making. There are few things more satisfying than bringing an idea to life.  </p>
+          <p className='aboutText'>Hello, I'm Emily Mills. I'm passionate about using design to communicate stories in a way that resonates with the right audience.</p>
           <div className='socialIconsContainer'>
             <a href='https://www.instagram.com/helloemilymills/' target='_blank' rel='noreferrer'>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

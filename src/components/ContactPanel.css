@@ -29,7 +29,7 @@
     z-index: 11;
     width: calc(100vw - 10vh - 8px);
     height: calc(90vh - 8px);
-    background-color: #0b090a;
+    background-color: #0a1128;
     color: #ffffff;
     padding: 5vh;
     box-sizing: border-box;
@@ -39,7 +39,7 @@
     opacity: .98;
     overflow-y: scroll;
     scrollbar-width: thin;
-    scrollbar-color: #0b090a;
+    scrollbar-color: #0a1128;
     padding-right: 5vh;
     border-radius: 2px;
 }
@@ -53,7 +53,7 @@
 }
 
 .contactPanel::-webkit-scrollbar-track {
-    background-color: #0b090a; /* Set track color for Chrome and Safari */
+    background-color: #0a1128; /* Set track color for Chrome and Safari */
 }
 
 .column {
@@ -64,7 +64,7 @@
 
 .profilePictureContainer {
     margin: 20px 0;
-    background-color: black;
+    background-color: #0a1128;
     width: 200px;
     height: 200px;
     border-radius: 200px;
@@ -92,7 +92,7 @@
 .column2 {
     overflow-y: scroll;
     scrollbar-width: thin;
-    scrollbar-color: #0b090a;
+    scrollbar-color: #0a1128;
     padding-right: 5vh;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .column2::-webkit-scrollbar-track {
-    background-color: #0b090a; /* Set track color for Chrome and Safari */
+    background-color: #0a1128; /* Set track color for Chrome and Safari */
 }
 
 .contactForm {

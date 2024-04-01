@@ -1,9 +1,10 @@
 /* licenced Adobe font called Neighbor */
-@import url("https://use.typekit.net/xyo0eyk.css");
+/* @import url("https://use.typekit.net/xyo0eyk.css"); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 html {
   overflow: hidden;
-  font-family: "neighbor", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
